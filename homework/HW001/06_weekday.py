@@ -18,6 +18,10 @@ def check_day(day2):
     else:
         day2 %= 7
         print(list1[day2-1])
+        if (day2 == 6 or day2 == 7):
+            print('Weekend')
+        else:
+            print('Weekday')
 
 print('This program will indicate if the day of the week it is based on the number..')
 check_day(input_data1())
