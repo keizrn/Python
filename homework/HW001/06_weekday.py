@@ -5,8 +5,7 @@ list1 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Su
 
 def input_data1():
     try:
-        day1 = int(input('Please enter number\n'))
-        return day1
+        return int(input('Please enter number\n'))
     except:
         return 0
 
@@ -23,5 +22,5 @@ def check_day(day2):
         else:
             print('Weekday')
 
-print('This program will indicate if the day of the week it is based on the number..')
+print('This program will indicate which day of the week it is based on the number..')
 check_day(input_data1())
