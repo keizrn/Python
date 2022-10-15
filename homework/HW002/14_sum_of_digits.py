@@ -20,5 +20,6 @@ def calc_digits(real_num):
             return
     print(sum(list_int))
 
-string2 = input('input number\n').replace('-','')
+print('This program will sum digits in any number.')
+string2 = input('Please input number\n').replace('-','')
 calc_digits(string2)
