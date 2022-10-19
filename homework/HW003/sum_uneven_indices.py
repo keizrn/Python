@@ -3,13 +3,12 @@
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-from termcolor import colored
 import script
 
 
 def print_uneven_color(list_3):         
     for l in range(0, len(list_3)//2):
-        print(list_3[l*2],'\t',colored(list_3[l*2+1],'green'))
+        print(list_3[l*2],'\t',list_3[l*2+1])
     if len(list_3)%2 > 0:
         print(list_3[len(list_3)-1])
 

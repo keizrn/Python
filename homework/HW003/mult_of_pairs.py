@@ -6,4 +6,4 @@ list1 = script.random_list(input("This program will sum pairs of numbers in the 
                             input('Please indicate minimal number for random generation..\n'),
                             input('And a maximal border..\n'))
 print('The random list is:',list1)
-print('The result is:',script.sum_pairs_in_list(list1,True))
+print('The result is:',script.mult_pairs_in_list(list1,True))
