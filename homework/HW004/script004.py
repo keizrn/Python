@@ -23,13 +23,12 @@ def list_to_dict(list_2):
             dict_2[i2] = 1
         else:
             dict_2[i2] += 1
-    return(dict_2)
+    return dict_2
 
-# def print_dict_by_columns(dict_3):
-#     print("Number".ljust(10), "Times")
-#     for i3 in dict_3:
-#         if dict_3[i3] == 1:
-#             print(str(i3).ljust(10), dict_3[i3])
+def print_dict_by_columns(dict_3):
+     print("Number".ljust(10), "Times")
+     for i3 in dict_3:
+         print(str(i3).ljust(10), dict_3[i3])
 
 def nonrecurr_dict(dict_4):
     list_4 = []
@@ -40,8 +39,8 @@ def nonrecurr_dict(dict_4):
 
 def find_simple_numbers(num_5):
     list_5 = list(range(num_5))
-    for i5 in range(0,len(list_5)):
-        for i5_a in range(i5+1,len(list_5)):
+    for i5 in range(0, len(list_5)):
+        for i5_a in range(i5+1, len(list_5)):
             if list_5[i5_a] % list_5[i5] == 0:
                 list_5.remove(i5_a)
     print(list_5)
@@ -80,16 +79,10 @@ def write_polynomial(list_02):
 
 def read_polynomial(string_06):
     dict_06 = {}
+    string_06 = string_06.replace(" = 0", "x⁰")
     list_06 = string_06.split(" + ")
-    string_temp_06 = list_06[len(list_06) - 1]
-    list_temp_06 = string_temp_06.split(" = ")
-    list_06.remove(list_06[len(list_06) - 1])
-    list_06.append(list_temp_06[0])
-    list_06.append(list_temp_06[1])
-    print(list_06)
     anti_sup_02 = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
-    for item_06 in range(len(list_06)-2):
-        print(list_06[item_06])
+    for item_06 in range(len(list_06)):
         list_06[item_06] = list_06[item_06].split('x')
         if list_06[item_06][0] == "":
             list_06[item_06][0] = 1
@@ -97,7 +90,6 @@ def read_polynomial(string_06):
             list_06[item_06][1] = "1"
         list_06[item_06][1] = list_06[item_06][1].translate(anti_sup_02)
         dict_06[int(list_06[item_06][1])] = int(list_06[item_06][0])
-    dict_06[int(list_06[len(list_06)-2][1])] = int(list_06[len(list_06)-2][0])
     return dict_06
 
 def merge_dicts(dict_001, dict_002):
@@ -116,7 +108,6 @@ def dict_to_list(dict_07):
     list_07 = []
     i_07 = max(dict_07)
     while i_07 >= 0:
-        print(i_07, list_07)
         if i_07 not in dict_07:
             list_07.append(0)
         else:

@@ -10,5 +10,5 @@ print(list_1)
 string_01 = script004.write_polynomial(list_1)
 print(string_01)
 
-file01 = open("polynomial.txt", 'a', encoding='utf8')
+file01 = open("polynomial.txt", 'w', encoding='utf8')
 file01.write(string_01)
